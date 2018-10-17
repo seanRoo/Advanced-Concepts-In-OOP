@@ -1,0 +1,15 @@
+
+TASKQuestion:
+What is wrong with the approach to override methods to 
+do nothing?
+
+Marks will be awarded for:
+a) Briefly explaining a negative consequence of this approach.
+
+b) Having used the terms 'client programmer' and 'interface'
+	appropriately in the explanation
+
+ANSWER:
+
+For situations like this it is best we don't use inheritance because, depending on future changes the client wishes to make, the client programmer may have to override the quack and fly classes for every subclass of duck that may or may not fly/quack.
+So, we can create interfaces representing ducks that can fly(flyable) and ducks that can quack(quackable), which can be implemented by such duck objects. A Java interface is a collection of abstract methods that are inherited by a class when that class implements the interface. So ducks that do fly/quack can implement the appropriate interface and make use of these abstract methods. This isn't the optimal solution but an improvement.

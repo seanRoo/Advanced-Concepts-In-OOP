@@ -1,0 +1,15 @@
+
+TASKQuestion:
+What is wrong with the approach to introduce  classifiers 
+(i.e. 'FlyingDuck', NonFlyingDuck' etc.) into the type
+hierarchy of the ducks problem?
+
+Marks will be awarded for:
+a) Briefly explaining a negative consequence of this approach.
+
+b) Having used the terms 'repeating code', 'class explosion' and 
+	referring to the "DRY" synonym appropriately in the explanation.
+
+ANSWER:
+
+These classes both extend the abstract duck class, which assumes that all ducks we create can quack. Flying Duck and non-Flying Duck both inherit the quack method, but we could have a duck that doesn't quack. This would mean removing the quack method from the duck class and creating a sole quack subclass for ducks with different combinations of quack, flying and non flying. If this problem were scaled, we would have an explosion of classes because every combination of attributes would need to be accounted for, also meaning that the same classes will be repeated over again, violating the 'Dont Repeat Yourself' rule. This problem is shown when we add the decoy duck, which does not quack but still inherits the quack method from the abstract duck class.
